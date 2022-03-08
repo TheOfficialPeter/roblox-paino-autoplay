@@ -13,8 +13,7 @@ song_text = song_text.replace('\n', ' ')
 song_text = song_text.replace('{', '')
 song_text = song_text.replace('}', '')
 
-def play_song(string, delayFirst, delaySecond):
-    delay = random.randrange(delayFirst, delaySecond)
+def play_song(string, delay):
     for letterI in range(len(string)):
         try:
             if string[letterI+1] != "-":
@@ -38,4 +37,4 @@ def play_song(string, delayFirst, delaySecond):
             pass
 
 ## Initialize #
-play_song(song_text, .3, .5)
+play_song(song_text, .3)
